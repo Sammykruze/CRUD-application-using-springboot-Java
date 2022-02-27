@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> All Books</title>
+		<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+	</head>
+	
+	<body>
+	<div class="table-responsive">
+		<table class="table table-primary table-hover">
+		  
+		 	<thead>
+		 		<th scope="col"> Book Id </th>
+		 		<th scope="col"> Book title </th>
+		 		<th scope="col"> Book author </th>
+		 		<th scope="col"> Book price </th>
+		 	
+		 	</thead>
+		 	<tr th:each="library : ${LibraryStoreModel}">
+		 		<td scope="col" th:text="${library.id}"> </td>
+		 		<td scope="col" th:text="${library.title}"></td>
+		 		<td scope="col" th:text="${library.author}"></td>
+		 		<td scope="col" th:text="${library.price}"></td>
+		 	</tr>
+		</table>
+	</div>
+	
+	<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+			<script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+			<script th:src="@{/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js}"></script>
+	</body>
+</html>
